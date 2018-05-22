@@ -1,3 +1,5 @@
 # Ignore IntelliJ IDEA specific files.
 .idea
 *.iml
+
+**/target/**
