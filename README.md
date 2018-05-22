@@ -1,1 +1,1 @@
-Simple image resizing service with Spring Boot
+###Simple image resizing service with Spring Boot
