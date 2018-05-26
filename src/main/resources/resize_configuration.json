@@ -1,0 +1,10 @@
+{
+  "thumbnail": {
+    "height": 300,
+    "width": 300,
+    "quality": 90,
+    "scale": "none",
+    "fillColor": "white",
+    "type": "png"
+  }
+}
