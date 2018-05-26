@@ -3,8 +3,16 @@
     "height": 300,
     "width": 300,
     "quality": 90,
-    "scale": "none",
-    "fillColor": "white",
+    "scale": "crop",
+    "fillColor": "transparent",
     "type": "png"
+  },
+  "poster": {
+    "height": 1000,
+    "width": 500,
+    "quality": 100,
+    "scale": "crop",
+    "fillColor": "transparent",
+    "type": "jpg"
   }
 }
