@@ -1,4 +1,5 @@
-###Simple image resizing service with Spring Boot
+### Simple image resizing service with Spring Boot
+
 
 Resize configuration:
 * Height (int), the new height of the image in pixels
