@@ -1,11 +1,12 @@
 package com.byk.services;
 
+import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
+
 
 public interface ImageStorage {
 
-    InputStream get(String name) throws FileNotFoundException;
+    File get(String name) throws FileNotFoundException;
 
-    String save(InputStream inputStream);
+    String save(File file);
 }

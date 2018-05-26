@@ -1,6 +1,6 @@
 package com.byk.controllers;
 
-import com.byk.services.ImageStorage;
+import com.byk.services.ImageResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -23,7 +23,7 @@ import java.io.IOException;
 public class ImageController {
 
     @Autowired
-    public ImageStorage imageService;
+    ImageResolver imageResolver;
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(ImageController.class, args);
@@ -34,8 +34,8 @@ public class ImageController {
                                     @RequestParam("reference") String reference) throws IOException {
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);
-        InputStreamResource image = new InputStreamResource(imageService.get(reference));
-        return new ResponseEntity(image, headers, HttpStatus.OK);
+        InputStreamResource inputStreamResource = imageResolver.resolve(predefinedTypeName, reference);
+        return new ResponseEntity(inputStreamResource, headers, HttpStatus.OK);
     }
 
 }
