@@ -1,19 +1,24 @@
 ### Simple image resizing service with Spring Boot
 
 
-How to run:
+##### How to run
 * `mvn spring-boot:run`
 * Go to: `http://localhost:8080/image/show/original/byk?reference=b1.jpg`
 
+##### Selectors
+http://localhost:8080/image/show/`{type}`/byk?reference=`{reference}`
+`type` - One of the following: [thumbnail, poster, original]
+`reference` - One of the available images:
+`b1.jpg`, `b2.jpg`, `b3.jpg`, `b4.jpg`, `b5.jpg`
 
-Resize configuration `resources/resize_configuration.json`:
-
+##### Resize configuration `resources/resize_configuration.json`:
 * Height (int), the new height of the image in pixels
 * Width (int), the new width of the image in pixels
-* Quality (int), the JPG compression quality, from 0 - 100.
-* Scale type (enumerator), how is the image resized when the new height and width are not in the same aspect ratio as the original image
-    * Crop, cut of parts of the image that no longer fit the new aspect ratio
-    * Fill, fill up the parts of the image that no longer fit the new aspect ration with a background-color specified by the Fill-color property
-    * Skew, simply squeeze the image to fit the new height and width, this will make the image look bad in most cases
-* Fill-color (hex value), used when the Scale-type is set to Fill.
-* Type (enumerator), the type of the image returned: JPG, PNG
+* TODO: Add more parameters and map them to the resize library.
+
+##### Structure
+        ImageResolver
+          /     \
+ImageResizer    ImageStorage
+     /
+ResizeConfiguration
