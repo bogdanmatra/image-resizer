@@ -1,6 +1,11 @@
 ### Simple image resizing service with Spring Boot
 
 
+How to run:
+* `mvn spring-boot:run`
+* Go to: `http://localhost:8080/image/show/original/byk?reference=b1.jpg`
+
+
 Resize configuration `resources/resize_configuration.json`:
 
 * Height (int), the new height of the image in pixels

@@ -29,7 +29,7 @@ public class ImageController {
         SpringApplication.run(ImageController.class, args);
     }
 
-    @RequestMapping("/images/{predefined-type-name}/{dummy-seo-name}")
+    @RequestMapping("/image/show/{predefined-type-name}/{dummy-seo-name}")
     public ResponseEntity testImage(@PathVariable("predefined-type-name") String predefinedTypeName,
                                     @RequestParam("reference") String reference) throws IOException {
         final HttpHeaders headers = new HttpHeaders();
