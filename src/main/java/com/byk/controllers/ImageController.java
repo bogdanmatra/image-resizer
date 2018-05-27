@@ -25,13 +25,13 @@ public class ImageController {
     @Autowired
     ImageResolver imageResolver;
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         SpringApplication.run(ImageController.class, args);
     }
 
     @RequestMapping("/image/show/{predefined-type-name}/{dummy-seo-name}")
-    public ResponseEntity testImage(@PathVariable("predefined-type-name") String predefinedTypeName,
-                                    @RequestParam("reference") String reference) throws IOException {
+    public ResponseEntity getImage(@PathVariable("predefined-type-name") String predefinedTypeName,
+                                   @RequestParam("reference") String reference) throws IOException {
         final HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.IMAGE_JPEG);
         InputStreamResource inputStreamResource = imageResolver.resolve(predefinedTypeName, reference);
