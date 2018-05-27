@@ -1,7 +1,8 @@
 package com.byk.services;
 
+import com.byk.exceptions.ImageResizerException;
+
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 
 
 public interface ImageResizer {
@@ -11,8 +12,8 @@ public interface ImageResizer {
      * @param bufferedImage The image to be resized.
      * @param type Resize configuration from {@link ResizeConfiguration}.
      * @return
-     * @throws IOException
+     * @throws ImageResizerException
      */
-    BufferedImage resize(BufferedImage bufferedImage, String type) throws IOException;
+    BufferedImage resize(BufferedImage bufferedImage, String type) throws ImageResizerException;
 
 }

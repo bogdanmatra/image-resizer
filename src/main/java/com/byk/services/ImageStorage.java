@@ -1,9 +1,10 @@
 package com.byk.services;
 
+import com.byk.exceptions.ImageResizerException;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 
 public interface ImageStorage {
@@ -22,5 +23,5 @@ public interface ImageStorage {
      * @param fileName The new file name.
      * @return
      */
-    File save(BufferedImage bufferedImage, String fileName) throws IOException;
+    File save(BufferedImage bufferedImage, String fileName) throws ImageResizerException;
 }
