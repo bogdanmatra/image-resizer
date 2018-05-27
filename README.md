@@ -32,4 +32,4 @@ If the selector has a different value, the configuration mapped to the selector 
 The image is resized according to the configuration by the `ImageResizer`, saved to the `ImageStorage` and sent to the client.
 Future requests will retrieve the resized image directly from the `ImageStorage`.
 
-OBS: Resized images are saved as {selector}_originalFileName.jpg (ex: `thumbnail_b1.jpg`).
+OBS: Resized images are saved as `{selector}_originalFileName.jpg` (ex: `thumbnail_b1.jpg`).
